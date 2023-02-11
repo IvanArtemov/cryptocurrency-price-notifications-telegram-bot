@@ -1,0 +1,22 @@
+bot:
+  token: token
+okx:
+  url: https://www.okx.com/api/v5/
+  paths:
+    trades: market/trades
+    instruments: public/instruments
+
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/okx_notifications_bot
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        id:
+          new_generator_mappings: false
+        format_sql: true
