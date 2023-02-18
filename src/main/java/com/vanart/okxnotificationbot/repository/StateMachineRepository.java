@@ -21,4 +21,9 @@ public class StateMachineRepository {
     public void save(Long chatId, StateMachine<SMStates, SMEvents> stateMachine) {
         stateMachineMap.put(chatId, stateMachine);
     }
+
+
+    public void remove(Long chatId) {
+        stateMachineMap.remove(chatId);
+    }
 }
